@@ -14,11 +14,13 @@ if [ -e /usr/local/etc/create_repo.conf ]; then
 fi
 
 if [ -z "$git_host" ]; then
-
+	echo "git_host must be defined in your /usr/local/etc/create_repo.conf file"
+	exit 1
 fi
 
 if [ -z "$repo_home" ]; then
-
+	echo "repo_home must be defined in your /usr/local/etc/create_repo.conf file"
+	exit 1
 fi
 
 if [ $# -lt 1 ]; then

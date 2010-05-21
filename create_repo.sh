@@ -50,6 +50,13 @@ Be sure to configure your name and email:
 
     git config user.email <email>
     git config user.name "<Full Name>"
+    
+You'll probably want to also run:
+
+git config branch.master.remote 'origin'
+git config branch.master.merge 'refs/heads/master'
+git config push.default tracking
+
 
 ************** TROUBLESHOOTING ******************************"
 

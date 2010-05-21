@@ -64,8 +64,8 @@ If you still can't clone, it's likely that your public key is not in the git use
 __EOT
 
 else
-	if ! groups | grep -q wheel ; then
-		echo "Sorry, you must be part of the group 'wheel' to do this."
+	if ! groups | grep -q -E '(wheel|staff)' ; then
+		echo "Sorry, you must be part of the group 'wheel' (or 'staff' on Mac OS X) to do this."
 		exit 1
 	fi
 
